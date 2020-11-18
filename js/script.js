@@ -14,11 +14,11 @@ function getRandomColorChannel(options=256) {
 //let getRandomColorChannel = newColor;
 // 2) Update user interface (`document`), setting the new colour to the body's background
 
-document.getElementById("ncolor").style.backgroundColor = getRandomColorChannel();
+document.getElementById("ncolor").style.backgroundColor = (`# + ${getRandomColorChannel()}`);
 
 // 3) Use the new RGB value to update the label "rgb(###, ####, ###)" (replacing ###s with the Number values)
-document.getElementById("ncolor").style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
 
+document.getElementById('ncolor').innerHTML= (`rgb(${getRandomColorChannel()} `);
 
 // 4) Wrap the random colour procedure in a function named `setNewColour()`, call it from the `console` to test
 
